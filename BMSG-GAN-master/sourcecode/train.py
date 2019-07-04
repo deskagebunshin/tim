@@ -53,7 +53,7 @@ def parse_arguments():
                         help="saved state for discriminator optimizer")
 
     parser.add_argument("--images_dir", action="store", type=str,
-                        default="../data/tim",
+                        default="../tim",
                         # default=os.environ['SM_CHANNEL_TRAINING'],
                         help="path for the images directory")
 
@@ -66,12 +66,12 @@ def parse_arguments():
                         help="whether to randomly mirror the images during training")
 
     parser.add_argument("--sample_dir", action="store", type=str,
-                        default="samples/tim4/",
+                        default="new_samples/tim4/",
                         # default=os.environ['SM_MODEL_DIR'],
                         help="path for the generated samples directory")
 
     parser.add_argument("--model_dir", action="store", type=str,
-                        default="models/tim4/",
+                        default="new_models/tim4/",
                         # default=os.environ['SM_MODEL_DIR'],
                         help="path for saved models directory")
 
@@ -107,7 +107,7 @@ def parse_arguments():
                         help="number of logs to generate per epoch")
 
     parser.add_argument("--num_samples", action="store", type=int,
-                        default=36,
+                        default=9,
                         help="number of samples to generate for creating the grid" +
                              " should be a square number preferably")
 
