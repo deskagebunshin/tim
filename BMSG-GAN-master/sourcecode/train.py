@@ -53,7 +53,7 @@ def parse_arguments():
                         help="saved state for discriminator optimizer")
 
     parser.add_argument("--images_dir", action="store", type=str,
-                        default="../tim",
+                        default="../murals",
                         # default=os.environ['SM_CHANNEL_TRAINING'],
                         help="path for the images directory")
 
@@ -66,12 +66,12 @@ def parse_arguments():
                         help="whether to randomly mirror the images during training")
 
     parser.add_argument("--sample_dir", action="store", type=str,
-                        default="new_samples/tim4/",
+                        default="new_samples/murals/",
                         # default=os.environ['SM_MODEL_DIR'],
                         help="path for the generated samples directory")
 
     parser.add_argument("--model_dir", action="store", type=str,
-                        default="new_models/tim4/",
+                        default="new_models/murals/",
                         # default=os.environ['SM_MODEL_DIR'],
                         help="path for saved models directory")
 
