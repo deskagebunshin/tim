@@ -30,25 +30,25 @@ def parse_arguments():
                         help="pretrained weights file for generator", required=True)
 
     parser.add_argument("--latent_size", action="store", type=int,
-                        default=512,
+                        default=1024,
                         help="latent size for the generator")
 
     parser.add_argument("--depth", action="store", type=int,
-                        default=5,
+                        default=9,
                         help="latent size for the generator")
 
     parser.add_argument("--time", action="store", type=float,
-                        default=30,
+                        default=120,
                         help="Number of seconds for the video to make")
 
     parser.add_argument("--fps", action="store", type=int,
-                        default=30, help="Frames per second in the video")
+                        default=300, help="Frames per second in the video")
 
     parser.add_argument("--smoothing", action="store", type=float,
                         default=2.0, help="Amount of smoothing applied in transitional points")
 
     parser.add_argument("--out_dir", action="store", type=str,
-                        default="interp_animation_frames/",
+                        default="interp_animation_frames/toledo_1024",
                         help="path to the output directory for the frames")
 
     args = parser.parse_args()

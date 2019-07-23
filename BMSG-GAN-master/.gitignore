@@ -5,6 +5,7 @@ __pycache__/
 
 data/
 tim/
+Bacon/
 
 # C extensions
 *.so

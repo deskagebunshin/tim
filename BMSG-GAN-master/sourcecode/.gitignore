@@ -1,5 +1,10 @@
 # ignore models and samples directory
 models/
 samples/
+new_models/bacon
+new_models/toledo
+new_models/murals
+new_samples/bacon
+new_samples/toledo
 new_interps_for_promotion/
 interp_animation_frames/
