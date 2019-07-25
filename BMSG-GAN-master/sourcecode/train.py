@@ -33,28 +33,28 @@ def parse_arguments():
     parser = argparse.ArgumentParser()
 
     parser.add_argument("--generator_file", action="store", type=str,
-                        # default="new_models/toledo/GAN_GEN_1400.pth",
-                        default=None,
+                        default="new_models/toledo_1024/GAN_GEN_450.pth",
+                        #default=None,
                         help="pretrained weights file for generator")
 
     parser.add_argument("--generator_optim_file", action="store", type=str,
-                        # default="new_models/toledo/GAN_GEN_OPTIM_1400.pth",
-                        default=None,
+                        default="new_models/toledo_1024/GAN_GEN_OPTIM_450.pth",
+                        #default=None,
                         help="saved state for generator optimizer")
 
     parser.add_argument("--shadow_generator_file", action="store", type=str,
-                        # default="new_models/toledo/GAN_GEN_SHADOW_1400.pth",
-                        default=None,
+                        default="new_models/toledo_1024/GAN_GEN_SHADOW_450.pth",
+                        #default=None,
                         help="pretrained weights file for the shadow generator")
 
     parser.add_argument("--discriminator_file", action="store", type=str,
-                        # default="new_models/toledo/GAN_DIS_1400.pth",
-                        default=None,
+                        default="new_models/toledo_1024/GAN_DIS_450.pth",
+                        #default=None,
                         help="pretrained_weights file for discriminator")
 
     parser.add_argument("--discriminator_optim_file", action="store", type=str,
-                        # default="new_models/toledo/GAN_DIS_OPTIM_1400.pth",
-                        default=None,
+                        default="new_models/toledo_1024/GAN_DIS_OPTIM_450.pth",
+                        # default=None,
                         help="saved state for discriminator optimizer")
 
     parser.add_argument("--images_dir", action="store", type=str,
@@ -88,11 +88,11 @@ def parse_arguments():
                              "hinge, relativistic-hinge")
 
     parser.add_argument("--depth", action="store", type=int,
-                        default=9,
+                        default=8,
                         help="Depth of the GAN")
 
     parser.add_argument("--latent_size", action="store", type=int,
-                        default=512,
+                        default=256,
                         help="latent size for the generator")
 
     parser.add_argument("--batch_size", action="store", type=int,
@@ -100,7 +100,7 @@ def parse_arguments():
                         help="batch_size for training")
 
     parser.add_argument("--start", action="store", type=int,
-                        default=1,
+                        default=451,
                         help="starting epoch number")
 
     parser.add_argument("--num_epochs", action="store", type=int,
@@ -112,7 +112,7 @@ def parse_arguments():
                         help="number of logs to generate per epoch")
 
     parser.add_argument("--num_samples", action="store", type=int,
-                        default=16,
+                        default=9,
                         help="number of samples to generate for creating the grid" +
                              " should be a square number preferably")
 
