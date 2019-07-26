@@ -33,27 +33,27 @@ def parse_arguments():
     parser = argparse.ArgumentParser()
 
     parser.add_argument("--generator_file", action="store", type=str,
-                        default="new_models/toledo_1024/GAN_GEN_450.pth",
+                        default="new_models/toledo_1024/GAN_GEN_1000.pth",
                         #default=None,
                         help="pretrained weights file for generator")
 
     parser.add_argument("--generator_optim_file", action="store", type=str,
-                        default="new_models/toledo_1024/GAN_GEN_OPTIM_450.pth",
+                        default="new_models/toledo_1024/GAN_GEN_OPTIM_1000.pth",
                         #default=None,
                         help="saved state for generator optimizer")
 
     parser.add_argument("--shadow_generator_file", action="store", type=str,
-                        default="new_models/toledo_1024/GAN_GEN_SHADOW_450.pth",
+                        default="new_models/toledo_1024/GAN_GEN_SHADOW_1000.pth",
                         #default=None,
                         help="pretrained weights file for the shadow generator")
 
     parser.add_argument("--discriminator_file", action="store", type=str,
-                        default="new_models/toledo_1024/GAN_DIS_450.pth",
+                        default="new_models/toledo_1024/GAN_DIS_1000.pth",
                         #default=None,
                         help="pretrained_weights file for discriminator")
 
     parser.add_argument("--discriminator_optim_file", action="store", type=str,
-                        default="new_models/toledo_1024/GAN_DIS_OPTIM_450.pth",
+                        default="new_models/toledo_1024/GAN_DIS_OPTIM_1000.pth",
                         # default=None,
                         help="saved state for discriminator optimizer")
 
@@ -100,7 +100,7 @@ def parse_arguments():
                         help="batch_size for training")
 
     parser.add_argument("--start", action="store", type=int,
-                        default=451,
+                        default=1,
                         help="starting epoch number")
 
     parser.add_argument("--num_epochs", action="store", type=int,
